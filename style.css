@@ -1,0 +1,129 @@
+/* Genel resetler ve temel kutu modeli ayarları */
+* {
+    margin: 0; /* Tüm elementlerin dış boşluklarını sıfırlar */
+    padding: 0; /* Tüm elementlerin iç boşluklarını sıfırlar */
+    box-sizing: border-box; /* Kutu modelini ayarlar: kenar kutusu içinde yer alan içerik kutusu ve dolguların genişlik ve yükseklik değerlerini içerir */
+    font-family: 'Poppins', sans-serif; /* Sayfadaki metinlerin yazı tipini tanımlar */
+}
+
+/* Sayfa stil ayarları */
+body {
+    background-color: #eeeeea; /* Sayfa arka plan rengini beyaza ayarlar */
+}
+
+.wrapper {
+    width: 100%; /* Genişliği %100 yapar */
+    height: 100vh; /* Yüksekliği ekran yüksekliğinin tamamı (%100 viewport yüksekliği) olarak ayarlar */
+    display: flex; /* Elemanları yatayda hizalar */
+    align-items: center; /* Elemanları dikeyde ortalar */
+    justify-content: center; /* Elemanları yatayda ortalar */
+}
+
+.container {
+    height: 400px; /* Yüksekliği 400 piksel olarak ayarlar */
+    display: flex; /* Elemanları yatayda hizalar */
+    flex-wrap: nowrap; /* Elemanların taşmasını önler */
+    justify-content: start; /* Elemanları başlangıç noktasından hizalar */
+}
+
+.card {
+    width: 80px; /* Genişliği 80 piksel olarak ayarlar */
+    border-radius: .75rem; /* Köşeleri yumuşatır */
+    background-size: cover; /* Arka plan resminin kaplamasını ayarlar */
+    cursor: pointer; /* Fare imlecini el tipine dönüştürür */
+    overflow: hidden; /* Taşan içeriği gizler */
+    border-radius: 2rem; /* Köşeleri yumuşatır */
+    margin: 0 10px; /* Dış boşlukları ayarlar */
+    display: flex; /* Elemanları yatayda hizalar */
+    align-items: flex-end; /* Elemanları alt kısımdan hizalar */
+    transition: .6s cubic-bezier(.28,-0.03,.99); /* Geçiş efektini ayarlar */
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8); /* Kutuya gölge ekler */
+}
+
+.card:hover + .card .description {
+    opacity: 1 !important; /* Açıklama öğesinin opaklığını tamamen görünür yapar */
+    transform: translateY(0) !important; /* Açıklama öğesini yatayda hareket ettirir */
+}
+
+.card .description {
+    transition: all 0.6s ease; /* Tüm geçiş efektlerini ayarlar */
+}
+
+.card > .row {
+    color: white; /* Metin rengini beyaz yapar */
+    display: flex; /* Elemanları yatayda hizalar */
+    flex-wrap: nowrap; /* Elemanların taşmasını önler */
+}
+
+.card > .row > .icon {
+    background: rgb(231, 21, 178); /* Arka plan rengini belirler */
+    color: white; /* Metin rengini beyaz yapar */
+    border-radius: 50%; /* Köşeleri yumuşatır */
+    width: 50px; /* Genişliği 50 piksel olarak ayarlar */
+    display: flex; /* Elemanları yatayda hizalar */
+    justify-content: center; /* Elemanları yatayda ortalar */
+    align-items: center; /* Elemanları dikeyde ortalar */
+    margin: 15px; /* Dış boşlukları ayarlar */
+}
+
+.card > .row > .description {
+    display: flex; /* Elemanları yatayda hizalar */
+    justify-content: center; /* Elemanları yatayda ortalar */
+    flex-direction: column; /* Elemanları dikeyde hizalar */
+    overflow: hidden; /* Taşan içeriği gizler */
+    height: 88px; /* Yüksekliği 88 piksel olarak ayarlar */
+    width: 520px; /* Genişliği 520 piksel olarak ayarlar */
+    opacity: 0; /* Opaklığı sıfırlar */
+    transform: translateY(30px); /* Dikeyde hareketi ayarlar */
+    transition-delay: .3s; /* Geçiş gecikmesini ayarlar */
+}
+
+.description p {
+    color: white; /* Metin rengini beyaz yapar */
+    padding-top: 5px; /* Üst boşluğu ayarlar */
+}
+
+.description h4 {
+    text-transform: uppercase; /* Başlık metnini büyük harfe dönüştürür */
+}
+
+input {
+    display: none; /* Giriş kutusunu gizler */
+}
+
+input:checked + label {
+    width: 600px; /* Genişliği 600 piksel olarak ayarlar */
+}
+
+input:checked + label .description {
+    opacity: 1 !important; /* Açıklama öğesinin opaklığını tamamen görünür yapar */
+    transform: translateY(0) !important; /* Açıklama öğesini yatayda hareket ettirir */
+}
+
+.card[for="c1"] {
+    background-image: url(image/1.jpg); /* Resim bağlantısını belirler */
+}
+
+.card[for="c2"] {
+    background-image: url(image/2.jpg); /* Resim bağlantısını belirler */
+}
+
+.card[for="c3"] {
+    background-image: url(image/3.jpg); /* Resim bağlantısını belirler */
+}
+
+.card[for="c4"] {
+    background-image: url(image/4.jpg); /* Resim bağlantısını belirler */
+}
+
+.card[for="c5"] {
+    background-image: url(image/5.jpg); /* Resim bağlantısını belirler */
+}
+
+.card[for="c6"] {
+    background-image: url(image/6.jpg); /* Resim bağlantısını belirler */
+}
+
+.card[for="c7"] {
+    background-image: url(image/7.jpg); /* Resim bağlantısını belirler */
+}
